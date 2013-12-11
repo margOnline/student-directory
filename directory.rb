@@ -10,7 +10,4 @@ puts "Freddy Kruger"
 puts "The Dark Knight"
 puts "Professor Green"
 #show the total
-print "Overall, we have "
-#print doesn't add new line characters
-print student_count
-puts " great students."
+puts "Overall, we have #{student_count} great students."
