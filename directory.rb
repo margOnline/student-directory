@@ -1,13 +1,13 @@
 students = [
-            ["MargOnline", :august],
-            ["HarriSam", :august],
-            ["LorrainePhil", :august],
-            ["Kunks001", :august],
-            ["MindfulCoder", :august],
-            ["Chewymeister", :august],
-            ["Violentr", :august],
-            ["JamesJoshuaHill", :august],
-            ["Ting0807", :august]
+            {:name => "MargOnline", :cohort => :august},
+            {:name => "HarriSam", :cohort => :august},
+            {:name => "LorrainePhil", :cohort => :august},
+            {:name => "Kunks001", :cohort => :august},
+            {:name => "MindfulCoder", :cohort => :august},
+            {:name => "Chewymeister", :cohort => :august},
+            {:name => "Violentr", :cohort => :august},
+            {:name => "JamesJoshuaHill", :cohort => :august},
+            {:name => "Ting0807", :cohort => :august}
           ]
 
 def print_header
@@ -16,7 +16,7 @@ def print_header
 end
 
 def print(names)
-  names.each {|name| puts "#{name[0]} in #{name[1].capitalize} cohort"}
+  names.each {|name| puts "#{name[:name]} in #{name[:cohort].capitalize} cohort"}
 end
 
 def print_footer(students)
