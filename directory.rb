@@ -7,7 +7,7 @@ def print(names)
   if names.empty?
     puts "No students have enrolled yet."
   else
-    names.each {|name| puts "#{name[:name]} in #{name[:cohort].capitalize} cohort"}
+    names.each_with_index {|name,index| puts "#{index+1}. #{name[:name]} in #{name[:cohort].capitalize} cohort"}
   end
 end
 
