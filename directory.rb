@@ -1,14 +1,14 @@
-students = [
-            {:name => "MargOnline", :cohort => :august},
-            {:name => "HarriSam", :cohort => :august},
-            {:name => "LorrainePhil", :cohort => :august},
-            {:name => "Kunks001", :cohort => :august},
-            {:name => "MindfulCoder", :cohort => :august},
-            {:name => "Chewymeister", :cohort => :august},
-            {:name => "Violentr", :cohort => :august},
-            {:name => "JamesJoshuaHill", :cohort => :august},
-            {:name => "Ting0807", :cohort => :august}
-          ]
+# students = [
+#             {:name => "MargOnline", :cohort => :august},
+#             {:name => "HarriSam", :cohort => :august},
+#             {:name => "LorrainePhil", :cohort => :august},
+#             {:name => "Kunks001", :cohort => :august},
+#             {:name => "MindfulCoder", :cohort => :august},
+#             {:name => "Chewymeister", :cohort => :august},
+#             {:name => "Violentr", :cohort => :august},
+#             {:name => "JamesJoshuaHill", :cohort => :august},
+#             {:name => "Ting0807", :cohort => :august}
+#           ]
 
 def print_header
   puts "The students in the August cohort"
@@ -23,6 +23,20 @@ def print_footer(students)
   puts "Overall, we have #{students.length} great students."
 end
 
+def input_students
+  puts "Please enter the names of the students"
+  puts "To finish, press return twice"
+  students = []
+  name = gets.chomp
+  while !name.empty? do 
+    students << {:name => name, :cohort => :august}
+    puts "Now we have #{students.length} students"
+    name = gets.chomp
+  end
+  students
+end
+
+students = input_students
 print_header
 print(students)
 print_footer(students)
