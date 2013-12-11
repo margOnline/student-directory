@@ -1,11 +1,13 @@
-students = ["Dr. Hannibal Lecter",
-            "Darth Vader",
-            "Nurse Ratched",
-            "Michael Corleone",
-            "Alex De Large",
-            "Freddy Kruger",
-            "The Dark Knight",
-            "Professor Green"
+students = [
+            ["MargOnline", :august],
+            ["HarriSam", :august],
+            ["LorrainePhil", :august],
+            ["Kunks001", :august],
+            ["MindfulCoder", :august],
+            ["Chewymeister", :august],
+            ["Violentr", :august],
+            ["JamesJoshuaHill", :august],
+            ["Ting0807", :august]
           ]
 
 def print_header
@@ -14,7 +16,7 @@ def print_header
 end
 
 def print(names)
-  names.each {|name| puts name}
+  names.each {|name| puts "#{name[0]} in #{name[1].capitalize} cohort"}
 end
 
 def print_footer(students)
